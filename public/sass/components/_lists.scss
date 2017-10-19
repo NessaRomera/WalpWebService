@@ -1,0 +1,109 @@
+/*
+* Lists
+* ================ */
+* + .list-inline{ margin-top: 10px; }
+.list-inline {
+	margin-left: 0;
+  li{
+  	position: relative;
+  	z-index: 1;
+  	padding: 0;
+  	.icon{
+      font-size: 22px;
+      color: #fff;
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      text-shadow: 2px 2px 0px rgba(#333, 0.7);
+      &:hover{ text-shadow: 4px 4px 0px rgba(#333, 0.7); -webkit-transform: scale(1.2); transform: scale(1.2); }
+  	  &:before{
+  	  	position: absolute;
+  	  	top: 50%;
+  	  	left: 50%;
+  	  	-webkit-transform: translate(-50%, -50%);
+  	  	transform: translate(-50%, -50%);
+  	  }
+  	}
+  }
+}
+
+* + .marked-list{ margin-top: 20px; }
+.marked-list {
+  & + *{ margin-top: 20px; }
+  li {
+    font-size: 20px;
+    font-weight: 100;
+    line-height: 1.2;
+    & + li { margin-top: 10px; }
+    span {
+      position: relative;
+      &:before, &:after {
+        content: '';
+        position: absolute;
+        top: calc(50% - 1px);
+        left: -25px;
+        width: 15px;
+        height: 1px;
+        background: $brand-primary;
+        opacity: 0.4;
+      }
+      &:after {
+        left: auto;
+        right: -25px;
+      }
+    }
+  }
+}
+
+* + .bullet-list{ margin-top: 20px; }
+.bullet-list{
+  & + *{ margin-top: 20px; }
+  li {
+    padding-left: 20px;
+    font-weight: 100;
+    line-height: 1.2;
+    & + li { margin-top: 10px; }
+    span {
+      position: relative;
+      &:before{
+        content: '';
+        position: absolute;
+        top: 8px;
+        left: -20px;
+        width: 7px;
+        height: 7px;
+        background: $brand-primary;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+* + .download-btn{ margin-top: 20px; }
+.download-btn{
+  li, a, i, span{
+    display: inline-block;
+    vertical-align: middle;
+  }
+  li{ margin: 10px; }
+  a{
+    font-size: 20px;
+    font-family: $secondary-font-family;
+    text-align: left;
+    background: #fff;
+    border-radius: 50px;
+    color: $brand-primary;
+    padding: 14px 20px;
+    min-width: 200px;
+    &:hover{
+      -webkit-transform: translateY(-8px);
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px 0 rgba(#333,0.6);
+    }
+  }
+  i{
+    padding-right: 10px;
+    font-size: 30px;
+    color: $brand-primary;
+  }
+}

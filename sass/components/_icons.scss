@@ -1,0 +1,60 @@
+/*
+* Icons
+* ================ */
+.icon {
+  display: inline-block;
+  text-align: center;
+}
+
+.icon-circle{ border-radius: 50%; }
+.icon-bordered{ border: 2px solid; }
+
+// Size
+.icon-sm { font-size: 14px; }
+.icon-md{ font-size: 20px; }
+.icon-lg { font-size: 35px; }
+
+// Color
+.icon-primary {
+  color: #FFF;
+  background: $brand-primary;
+}
+
+.icon-wrap{
+	position: relative;
+	display: inline-block;
+	width: 70px;
+	height: 70px;
+	color: $brand-primary;
+	font-size: 30px;
+	background: #fff;
+	border: 1px solid $brand-primary;
+	border-radius: 50%;
+	box-shadow: 0 2px 0 0 rgba(#000,0.2);
+	-webkit-transition: all .4s ease;
+	transition: all .4s ease;
+	&:before{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+	}
+	&:after{
+		content: '';
+		position: absolute;
+		top: 0; left: 0; right: 0; bottom: 0;
+		border: 0 solid $brand-primary;
+		border-radius: 50%;
+		opacity: 0.3;
+		-webkit-transition: all .2s ease;
+		transition: all .2s ease;
+	}
+	& + *{ margin-top: 15px; }
+}
+.icon-block{
+	margin: 15px 0;
+	&:hover{
+		.icon-wrap:after{ border-width: 10px; top: -10px; left: -10px; right: -10px; bottom: -10px; }
+	}
+}

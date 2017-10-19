@@ -1,0 +1,61 @@
+/*
+* Type styles
+* ================ */
+#{headings()} {
+  vertical-align: baseline;
+  display: block;
+  color: #444;
+  font-weight: 400;
+  font-family: $secondary-font-family;
+  text-shadow: 0 2px 1px rgba(#333,0.4);
+
+  a:focus, a:hover {
+    color: $brand-primary;
+    text-decoration: none;
+  }
+}
+
+h1, .h1 {
+  font-size: 30px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  @media (min-width: $screen-sm-min) { font-size: 50px; }
+}
+
+h2, .h2 {
+  font-size: 30px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  @media (min-width: $screen-sm-min) { font-size: 40px; }
+}
+
+h3, .h3 {
+  font-size: 25px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  @media (min-width: $screen-sm-min) { font-size: 30px; }
+}
+
+h4, .h4 {
+  font-size: 20px;
+  line-height: 1.4;
+  @media (min-width: $screen-sm-min) { font-size: 24px; }
+}
+
+h5, .h5 {
+  font-size: 18px;
+  line-height: 30px;
+  @media (min-width: $screen-sm-min) { font-size: 22px; }
+}
+
+h6, .h6 {
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+
+
